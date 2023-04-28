@@ -1,0 +1,485 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del Navbar */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #333;
+    position: relative;
+}
+
+.ver-carrito {
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 170px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cantidad-carrito {
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 4px;
+    top: 45px;
+    right: 155px;
+    position: absolute;
+    display: none;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+}
+
+.delete-product {
+    cursor: pointer;
+}
+
+/* Estilos de la Sección Principal */
+#main-section {
+    background-color: #555;
+    color: #fff;
+    padding: 100px;
+    text-align: center;
+}
+
+#main-section h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#main-section p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Estilos de la Sección de Productos */
+#products-section {
+    padding: 60px;
+    text-align: center;
+}
+
+.container-prod {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.product-item {
+    max-width: 300px;
+    margin: 0 20px;
+    margin-top: 25px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.product-item p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.product-item .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-item button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.product-item button:hover {
+    opacity: 0.7;
+}
+
+/* estilos modal */
+
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+    border-radius: 20px;
+}
+
+
+
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0a0909;
+    color: #fff;
+    width: 100%;
+}
+
+.modal-header-title {
+    justify-self: start;
+}
+
+.modal-header-button {
+    cursor: pointer;
+}
+
+.modal-container .modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+
+.modal-container div img {
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+}
+
+
+.total-content {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.final-compra {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width : 900px) {
+
+    #main-section {
+        background-color: #555;
+        color: #fff;
+        padding: 70px;
+        text-align: center;
+    }
+
+    #products-section {
+        padding: 60px;
+        text-align: center;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .navbar {
+        background-color: #333;
+        position: relative;
+    }
+
+    .ver-carrito {
+        color: #000;
+        display: block;
+        position: absolute;
+        top: 105px;
+        right: 35px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .cantidad-carrito {
+        background-color: red;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 13px;
+        padding: 4px;
+        top: 115px;
+        right: 20px;
+        position: absolute;
+        display: none;
+    }
+
+
+    .navbar ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+    }
+
+
+    .navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .navbar ul li a:hover {
+        background-color: #555;
+    }
+
+
+
+    .container-prod {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-item {
+        max-width: 300px;
+        margin: 0 20px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .product-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .product-item h3 {
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .product-item p {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    .product-item .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .product-item button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .product-item button:hover {
+        opacity: 0.7;
+    }
+
+    .delete-product {
+        display: flex;
+        margin-bottom: 10px;
+        margin-top: 13px;
+    }
+
+    /* estilos modal */
+
+    .modal-container {
+        width: 80%;
+        margin: 0 10%;
+        max-height: 88vh;
+        color: #fff;
+        background-color: #121212;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        overflow: auto;
+        z-index: 9;
+        top: 11vh;
+        scrollbar-color: none;
+    }
+
+    .modal-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .modal-header {
+        display: flex;
+        justify-content: space-around;
+        background-color: #0a0909;
+        color: #fff;
+        width: 100%;
+    }
+
+    .modal-header-title {
+        justify-self: start;
+    }
+
+    .modal-header-button {
+        cursor: pointer;
+    }
+
+    .modal-container .modal-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        margin: 10px;
+    }
+
+    .modal-container div img {
+        height: 120px;
+        width: 120px;
+    }
+
+    h3 {
+        padding-top: 8px;
+    }
+
+    p {
+        padding-top: 12px;
+    }
+
+    .total-content {
+        font-size: 25px;
+        padding: 20px;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+}
+
+/* Estilos de la Sección "Sobre Nosotros" */
+#about-section {
+    background-color: #fff;
+    padding: 60px;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-container h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Estilos del Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
