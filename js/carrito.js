@@ -59,7 +59,7 @@ const pintarCarrito = () => {
 
     let final = document.querySelector(".final-compra")
     final.addEventListener("click", () => {
-        window.location.href = "contacto.html"
+        window.location.href = "compra.html"
     })
 }
 
