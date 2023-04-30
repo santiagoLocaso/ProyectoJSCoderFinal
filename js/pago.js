@@ -44,6 +44,7 @@ for (let i = yearActual; i <= yearActual + 8; i++) {
     formulario.selectYear.appendChild(opcion);
 }
 
+
 // Input numero tarjeta
 formulario.inputNumero.addEventListener('keyup', (e) => {
     let valorInput = e.target.value;
