@@ -141,13 +141,9 @@ formulario.addEventListener("submit", (e) => {
             title: 'Su compra fue realizada con éxito!',
             text: 'Gracias por elegirnos'
         }).then(() => {
-            window.location.href = '../productos.html';
-            const vaciarStorage = () => {
-                let carritoJson = JSON.stringify(carrito)
-                Storage.removeItem("carritoJson", carritoJson)
-            }
-            vaciarStorage()
+            window.location.href = '../productos.html'
+            carrito.splice(0, carrito.length)
+            localStorage.setItem("carrito", JSON.stringify(carrito));
         })
     }
 })
-
