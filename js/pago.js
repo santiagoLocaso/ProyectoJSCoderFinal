@@ -137,7 +137,7 @@ formulario.addEventListener("submit", (e) => {
     } else {
         Swal.fire({
             icon: 'success',
-            title: 'Su compra fue realizada con exito!',
+            title: 'Su compra fue realizada con éxito!',
             text: 'Gracias por elegirnos'
         }).then(() => {
             window.location.href = '../productos.html';
