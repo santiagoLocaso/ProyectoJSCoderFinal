@@ -86,9 +86,12 @@ const eliminarProducto = (id) => {
 const contadorCarrito = () => {
     cantidadCarrito.style.display = "block"
 
-    const carritoLength = carrito.length
-    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
-    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"))
+    const carritoReduce = carrito.reduce((total, producto) => {
+        return total + producto.cantidad
+    }, 0)
+
+    localStorage.setItem("carritoReduce", JSON.stringify(carritoReduce))
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoReduce"))
 }
 
 contadorCarrito()

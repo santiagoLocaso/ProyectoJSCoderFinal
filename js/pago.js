@@ -143,7 +143,9 @@ formulario.addEventListener("submit", (e) => {
         }).then(() => {
             window.location.href = '../productos.html'
             carrito.splice(0, carrito.length)
-            localStorage.setItem("carrito", JSON.stringify(carrito));
+            localStorage.setItem("carritoJson", JSON.stringify(carrito));
+            contadorCarrito()
+            pintarCarrito()
         })
     }
 })
